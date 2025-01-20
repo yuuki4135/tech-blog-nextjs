@@ -1,0 +1,10 @@
+services:
+  web:
+    container_name: tech-blog-nextjs
+    build: ./
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app:cached
+    tty: true
+    stdin_open: true
