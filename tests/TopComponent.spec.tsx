@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Title } from "@/app/components/Title";
+import { Title } from "@/components/Title";
 import '@testing-library/jest-dom';
 import { render, screen } from "@testing-library/react";
 
