@@ -4,6 +4,7 @@ services:
     build: ./
     ports:
       - 3000:3000
+      - 9005:9005
     volumes:
       - .:/home/node/app:cached
     tty: true
