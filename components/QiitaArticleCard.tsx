@@ -1,4 +1,4 @@
-type QiitaArticle = {
+export type QiitaArticle = {
   title: string;
   date: string;
   url: string;
