@@ -21,3 +21,6 @@ jobs:
           projectId: tech-blog-nextjs
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
+          QIITA_API_KEY: ${{ secrets.QIITA_API_KEY }}
+          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
