@@ -9,7 +9,7 @@ export type Blog = {
   id: string;
   title: string;
   content: string;
-  thumbnail: {
+  eyecatch: {
     url: string;
   };
   createdAt: string;

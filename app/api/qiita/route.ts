@@ -7,7 +7,7 @@ const DUMMY_THUMBNAIL = "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
-    const limit = searchParams.get('limit') || '4';
+    const limit = searchParams.get('limit') || '20';  // デフォルト値を20に変更
 
     const response = await fetch(QIITA_API_URL, {
       headers: {
