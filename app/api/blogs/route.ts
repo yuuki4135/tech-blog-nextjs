@@ -11,7 +11,8 @@ export async function GET(request: NextRequest) {
       queries: { limit },
     });
     return NextResponse.json(response);
-  } catch (error) {
+  } catch (err) {
+    console.error('Blog fetch error:', err);
     return NextResponse.json({ error: 'Failed to fetch blogs' }, { status: 500 });
   }
 }

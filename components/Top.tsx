@@ -2,12 +2,13 @@
 import { Blog } from '@/libs/client';
 import { BlogCard } from '@/components/BlogCard';
 import { QiitaArticleCard } from '@/components/QiitaArticleCard';
+import type { QiitaArticle } from '@/components/QiitaArticleCard';
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 export const Top = () => {
   const [blogs, setBlogs] = React.useState<Blog[]>([]);
-  const [qiitaArticles, setQiitaArticles] = React.useState<any[]>([]);
+  const [qiitaArticles, setQiitaArticles] = React.useState<QiitaArticle[]>([]);
   const router = useRouter();
 
   React.useEffect(() => {

@@ -1,5 +1,6 @@
 import { client } from '@/libs/client';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 
 const BlogDetailPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -15,7 +16,13 @@ const BlogDetailPage = async ({ params }: { params: Promise<{ id: string }> }) =
         <div className="mb-4">
           { 
             blog.eyecatch ? (
-              <img src={blog.eyecatch.url} alt={blog.title} className="w-full max-h-96 object-cover" />
+              <Image
+                src={blog.eyecatch.url}
+                alt={blog.title}
+                width={1200}
+                height={630}
+                className="w-full max-h-96 object-cover"
+              />
             ) : (
               <div className="h-96 bg-base-200" />
             )
@@ -25,7 +32,8 @@ const BlogDetailPage = async ({ params }: { params: Promise<{ id: string }> }) =
              dangerouslySetInnerHTML={{ __html: blog.content }} />
       </div>
     );
-  } catch (error) {
+  } catch (err) {
+    console.error('Blog detail fetch error:', err);
     notFound();
   }
 };
