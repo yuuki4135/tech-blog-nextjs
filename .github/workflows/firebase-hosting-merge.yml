@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Create Environment File
         run: |
-          touch .env.local
-          echo "QIITA_API_KEY=${{ secrets.QIITA_API_KEY }}" >> .env.local
-          echo "MICROCMS_SERVICE_DOMAIN=${{ secrets.MICROCMS_SERVICE_DOMAIN }}" >> .env.local
-          echo "MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }}" >> .env.local
+          touch .env
+          echo "QIITA_API_KEY=${{ secrets.QIITA_API_KEY }}" >> .env
+          echo "MICROCMS_SERVICE_DOMAIN=${{ secrets.MICROCMS_SERVICE_DOMAIN }}" >> .env
+          echo "MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }}" >> .env
       - uses: actions/checkout@v4
       - run: npm ci
       - uses: FirebaseExtended/action-hosting-deploy@v0
